@@ -2,8 +2,12 @@ caw.vim
 neobundle.vim
 neocomplete.vim
 neosnippet.vim
+shabadou.vim
 unite-outline
 unite.vim
+vim-hier
 vim-marching
 vim-quickhl
 vim-quickrun
+vim-watchdogs
+vimproc.vim

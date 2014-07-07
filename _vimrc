@@ -28,6 +28,17 @@ NeoBundle "Shougo/neocomplete.vim"
 NeoBundle "Shougo/neosnippet.vim"
 NeoBundle "osyo-manga/vim-marching"
 NeoBundle "thinca/vim-quickrun"
+"NeoBundle "rhysd/wandbox-vim"
+NeoBundle "jceb/vim-hier"
+NeoBundle "osyo-manga/vim-watchdogs"
+NeoBundle "osyo-manga/shabadou.vim"
+
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'mac' : 'make -f make_mac.mak',
+\     'unix' : 'make -f make_unix.mak',
+\    },
+\ }
 
 "config
 nmap \c <Plug>(caw:I:toggle)
@@ -69,10 +80,19 @@ let g:quickrun_config = {
 \       "outputter/error/error"   : "quickfix",
 \       "outputter/buffer/split" : ":botright 8sp",
 \       "outputter/quickfix/open_cmd" : "copen",
+\       "runner" : "vimproc",
+\       "runner/vimproc/updatetime" : 500,
 \   },
 \   "cpp" : {
-\       "type" : "cpp/clang++",
-\       "cmdopt" : "-std=c++1y -ID:/home/cpp/boost/boost_1_55_0",
+\       "cmdopt" : "-std=c++0x",
+\       "hook/time/enable" : 1
+\   },
+\   "cpp/watchdogs_checker" : {
+\       "type" : "watchdogs_checker/clang++",
+\   },
+\
+\   "watchdogs_checker/g++" : {
+\       "cmdopt" : "-Wall",
 \   },
 \}
 
