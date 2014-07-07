@@ -1,1 +1,9 @@
+caw.vim
 neobundle.vim
+neocomplete.vim
+neosnippet.vim
+unite-outline
+unite.vim
+vim-marching
+vim-quickhl
+vim-quickrun
